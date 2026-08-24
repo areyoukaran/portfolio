@@ -22,6 +22,35 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Mobile topbar menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const topbar = document.querySelector('.topbar');
+  const toggle = document.querySelector('.topbar-toggle');
+  if (!topbar || !toggle) return;
+
+  const setOpen = (isOpen) => {
+    topbar.classList.toggle('is-open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.textContent = isOpen ? 'Close' : 'Menu';
+  };
+
+  toggle.addEventListener('click', () => {
+    setOpen(!topbar.classList.contains('is-open'));
+  });
+
+  topbar.querySelectorAll('.topbar-links a').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) setOpen(false);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
+  });
+});
+
 // ---------- GitHub live pulse (Home page) ----------
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('pulseGrid');

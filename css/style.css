@@ -225,6 +225,7 @@ a:focus-visible, button:focus-visible {
 
 /* ---------- Mobile navigation ---------- */
 .topbar { display: none; }
+.topbar-toggle { display: none; }
 
 /* ---------- Main layout ---------- */
 .main {
@@ -933,7 +934,8 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
+    flex-wrap: wrap;
     padding: 18px 24px;
     border-bottom: 1px solid var(--line);
     position: sticky;
@@ -943,15 +945,48 @@ h2 {
     z-index: 100;
   }
 
+  .topbar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--bg-raised);
+    color: var(--text-dim);
+    font: .7rem 'IBM Plex Mono', monospace;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .topbar-toggle[aria-expanded="true"] {
+    color: var(--accent);
+    border-color: var(--accent-dim);
+  }
+
   .topbar-links {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
     font: .72rem 'IBM Plex Mono', monospace;
   }
 
-  .topbar-links a { color: var(--text-dim); }
+  .topbar.is-open .topbar-links { display: flex; }
+
+  .topbar-links a {
+    color: var(--text-dim);
+    width: 100%;
+    padding: 9px 0;
+  }
+
   .topbar-links a.active { color: var(--accent); }
 
   .main {
@@ -983,12 +1018,11 @@ h2 {
   }
 
   .topbar-links {
-    min-width: 0;
-    gap: 9px;
+    gap: 2px;
     font-size: .66rem;
   }
 
-  .topbar-links a { white-space: nowrap; }
+  .topbar-links a { white-space: normal; }
 
   .main { padding: 0 18px; }
 
