@@ -1,55 +1,64 @@
 # Karan Kashyap - Portfolio
 
-Personal portfolio site. Static HTML/CSS/JS, no build step, no framework.
+Personal portfolio for Karan Kashyap, an AI backend engineer focused on agentic AI, LLM evaluation, retrieval systems, and backend infrastructure.
 
-**Live:** https://karankashyap.me 
+Live site: [karankashyap.me](https://karankashyap.me)
 
-## Structure
+## About the site
 
-```
+This is a lightweight static site built with plain HTML, CSS, and JavaScript. It has no build step, framework, or package manager dependency.
+
+- Home page with a short introduction, technical stack, featured work, and GitHub activity
+- About page with background and engineering interests
+- Resume page with experience, projects, skills, and a downloadable PDF
+- Contact page with email and social links
+- Responsive layout with shared styling and scroll-reveal behavior
+
+## Project structure
+
+```text
 .
-├── index.html          Home
-├── about.html           About
-├── resume.html          Resume / experience / skills
-├── contact.html          Contact form + direct links
-├── style.css             Single shared stylesheet
-├── script.js              Scroll-reveal + live GitHub stats fetch
-├── KaranKashyap_CV.pdf     Downloadable résumé
-├── vercel.json            Clean URLs, headers, caching, redirects
-├── robots.txt
-├── sitemap.xml
-├── site.webmanifest
-├── og-image.png            Social share preview (1200×630)
-└── favicon.ico / favicon-*.png / apple-touch-icon.png / android-chrome-*.png
+├── index.html                 Home page
+├── about.html                 About page
+├── resume.html                Resume, experience, projects, and skills
+├── contact.html               Contact details and links
+├── css/style.css              Shared stylesheet
+├── js/script.js               Scroll reveals and GitHub activity
+├── assets/favicon.ico         Browser icon
+├── assets/og-image.png        Social sharing image
+├── assets/KaranKashyap_CV.pdf Downloadable resume
+├── public/robots.txt          Search crawler rules
+├── public/sitemap.xml         Search sitemap
+├── site.webmanifest            Web app metadata
+└── vercel.json                Routes, headers, caching, and redirects
 ```
 
-## Local preview
+## Run locally
 
-No build step needed. Either open `index.html` directly in a browser, or serve it locally:
+No installation is required. From the project root, start a local static server:
 
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+python -m http.server 8000
 ```
 
-## Deploy
+Open [http://localhost:8000](http://localhost:8000) in a browser. Opening `index.html` directly also works, but a local server better matches production URL behavior.
 
-Deployed on [Vercel](https://vercel.com), connected to this repo. Every push to `main` auto-deploys.
+## Deployment
 
-`vercel.json` handles:
-- Clean URLs (`/about` instead of `/about.html`)
-- Permanent redirects from the old `.html` paths
-- Security headers (`X-Frame-Options`, `X-Content-Type-Options`, etc.)
-- Long-term caching for static assets (CSS/JS/images)
-- `/cv` and `/resume.pdf` shortcuts to the résumé PDF
+The site is configured for Vercel. Connect the repository to Vercel and deploy the `main` branch.
 
-## Updating content
+The Vercel configuration provides:
 
-All content is hand-written directly in the HTML files - no CMS. Update the relevant `.html` file, commit, push; Vercel redeploys automatically.
+- Clean routes such as `/about`, `/resume`, and `/contact`
+- Redirects from the original `.html` URLs
+- `/cv` and `/resume.pdf` shortcuts for the resume PDF
+- Security headers for every response
+- Long-term caching for versioned static assets
 
-If the résumé PDF changes, replace `KaranKashyap_CV.pdf` (keep the same filename, or update the references in `resume.html` and `vercel.json`).
+## Updating the site
 
-## Before going live
+Edit the relevant HTML, CSS, or JavaScript file, then preview the result locally. Keep asset references relative to the file that uses them and keep moved files under their matching folders.
 
-- [ ] Replace `https://karankashyap.dev` placeholder with the real domain in: `sitemap.xml`, `robots.txt`, and the `<meta>`/canonical tags in all four HTML files
-- [ ] Point domain DNS at Vercel (see deployment steps)
+When replacing the resume, keep the filename `assets/KaranKashyap_CV.pdf` or update both `resume.html` and `vercel.json`.
+
+After testing, commit and push the changes. Vercel will deploy the updated site automatically.

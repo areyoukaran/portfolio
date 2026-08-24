@@ -1,9 +1,8 @@
 {
-  "name": "Karan Kashyap — AI Backend Engineer",
+  "name": "Karan Kashyap - AI Backend Engineer",
   "short_name": "Karan Kashyap",
   "icons": [
-    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/assets/favicon.ico", "sizes": "32x32", "type": "image/x-icon" }
   ],
   "theme_color": "#14161a",
   "background_color": "#14161a",
