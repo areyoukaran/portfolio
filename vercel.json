@@ -30,10 +30,10 @@
       ]
     },
     {
-      "source": "/assets/KaranKashyap_CV.pdf",
+      "source": "/assets/Karan_Kashyap_Resume.pdf",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" },
-        { "key": "Content-Disposition", "value": "inline; filename=\"KaranKashyap_CV.pdf\"" }
+        { "key": "Content-Disposition", "value": "inline; filename=\"Karan_Kashyap_Resume.pdf\"" }
       ]
     }
   ],
@@ -42,7 +42,7 @@
     { "source": "/about.html", "destination": "/about", "permanent": true },
     { "source": "/resume.html", "destination": "/resume", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true },
-    { "source": "/cv", "destination": "/assets/KaranKashyap_CV.pdf", "permanent": false },
-    { "source": "/resume.pdf", "destination": "/assets/KaranKashyap_CV.pdf", "permanent": false }
+    { "source": "/cv", "destination": "/assets/Karan_Kashyap_Resume.pdf", "permanent": false },
+    { "source": "/resume.pdf", "destination": "/assets/Karan_Kashyap_Resume.pdf", "permanent": false }
   ]
 }

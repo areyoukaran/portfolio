@@ -567,6 +567,78 @@ h2 {
 .project-row:hover strong,
 .project-row:hover b { color: var(--accent); }
 
+/* ---------- Home routes ---------- */
+.home-paths { padding-top: 62px; }
+
+.home-paths .section-head {
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.home-paths h2 {
+  max-width: 420px;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+}
+
+.path-code {
+  font: .68rem 'IBM Plex Mono', monospace;
+  color: var(--accent-dim);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.path-card {
+  min-height: 230px;
+  padding: 22px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.path-card:hover {
+  background: var(--bg-raised);
+  transform: translateY(-3px);
+}
+
+.path-card-featured { background: var(--bg); }
+
+.path-card strong {
+  margin-top: 42px;
+  color: var(--text);
+  font: 500 1.18rem/1.2 'Space Grotesk', sans-serif;
+}
+
+
+.path-card p {
+  max-width: 280px;
+  margin: 10px 0 18px;
+  color: var(--text-dim);
+  font-size: .86rem;
+}
+
+
+.path-link {
+  margin-top: auto;
+  color: var(--accent);
+  font: .72rem 'IBM Plex Mono', monospace;
+}
+
+.path-link b { font-weight: 400; margin-left: 6px; }
+
+/* The resume owns the complete skills inventory. */
+.home-stack,
+.about-toolbox { display: none; }
+
 /* ---------- About ---------- */
 .page-intro {
   padding-top: 88px;
@@ -711,6 +783,21 @@ h2 {
 }
 
 .edu-cert-grid li { margin-bottom: 10px; }
+
+.credential-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-dim);
+  text-underline-offset: 3px;
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+
+.credential-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.credential-year { color: var(--text-dim); }
 
 /* ---------- Contact ---------- */
 .contact-hero {
@@ -1009,6 +1096,10 @@ h2 {
 
   .signal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
+  .path-grid { grid-template-columns: 1fr; }
+
+  .path-card { min-height: 190px; }
+
   .split-section,
   .about-grid { grid-template-columns: 1fr; gap: 34px; }
 
@@ -1076,6 +1167,8 @@ h2 {
 
   .signal-grid { grid-template-columns: 1fr 1fr; }
 
+  .home-paths .section-head { align-items: flex-start; }
+
   .signal-card {
     min-height: 122px;
     padding: 14px;
@@ -1109,8 +1202,7 @@ h2 {
   }
 
   .timeline-role,
-  .timeline-role li,
-  .skill-vals {
+  .timeline-role li {
     min-width: 0;
     overflow-wrap: anywhere;
   }
@@ -1259,6 +1351,14 @@ h2 {
 }
 
 .pulse-repo:hover { background: var(--bg-raised); }
+
+.pulse-repo-fallback {
+  border-left: 2px solid var(--accent-dim);
+}
+
+.pulse-repo-fallback .repo-meta {
+  color: #707783;
+}
 
 .pulse-repo .repo-name {
   font-family: 'IBM Plex Mono', monospace;
@@ -1411,40 +1511,87 @@ h2 {
 
 /* ---------- Resume: skills table ---------- */
 .skill-table {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
   border: 1px solid var(--line);
-  border-radius: 8px;
   overflow: hidden;
 }
 
-.skill-row {
+.resume-skill-item {
+  min-height: 76px;
+  padding: 15px 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: #15171b;
+  color: #858b97;
+  font: .74rem 'IBM Plex Mono', monospace;
+  transition: background .18s ease, color .18s ease;
+}
+
+.resume-skill-item:hover {
+  background: #202329;
+  color: var(--text);
+}
+
+.resume-skill-item img,
+.skill-badge {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+}
+
+.resume-skill-item img {
+  filter: grayscale(1);
+  opacity: .52;
+  transition: filter .18s ease, opacity .18s ease, transform .18s ease;
+}
+
+.resume-skill-item:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.skill-badge {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 20px;
-  padding: 16px 20px;
-  border-top: 1px solid var(--line);
-  transition: background .15s ease;
+  place-items: center;
+  border: 1px solid #30343c;
+  border-radius: 5px;
+  color: #747b87;
+  font: 600 .54rem 'IBM Plex Mono', monospace;
+  transition: color .18s ease, border-color .18s ease, background .18s ease, transform .18s ease;
 }
 
-.skill-row:first-child { border-top: none; }
-.skill-row:hover { background: var(--bg-raised); }
-
-.skill-cat {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: .74rem;
-  color: var(--accent-dim);
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  padding-top: 2px;
-}
-
-.skill-vals {
-  color: var(--text-dim);
-  font-size: .92rem;
-  line-height: 1.7;
+.resume-skill-item:hover .skill-badge {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: scale(1.08);
 }
 
 @media (max-width: 720px) {
-  .skill-row { grid-template-columns: 1fr; gap: 6px; }
+  .skill-table { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .resume-skill-item {
+    min-height: 68px;
+    padding: 12px;
+    font-size: .68rem;
+  }
+
+  .resume-skill-item span:last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .resume-skill-item img,
+  .skill-badge {
+    width: 19px;
+    height: 19px;
+    flex-basis: 19px;
+  }
 }
 
 .submit-btn:disabled {
