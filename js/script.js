@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const getCommitCount = async () => {
     try {
-      const response = await fetch(`https://api.github.com/search/commits?q=author:${USERNAME}&per_page=1`);
+      const response = await fetch(`https://api.github.com/search/commits?q=author:${USERNAME}&per_page=1`, { headers: { Accept: 'application/vnd.github+json' } });
       if (!response.ok) return null;
       const results = await response.json();
       return typeof results.total_count === 'number' ? results.total_count : null;
