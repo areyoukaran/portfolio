@@ -42,6 +42,7 @@
     { "source": "/about.html", "destination": "/about", "permanent": true },
     { "source": "/resume.html", "destination": "/resume", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/projects.html", "destination": "/projects", "permanent": true },
     { "source": "/cv", "destination": "/assets/Karan_Kashyap_Resume.pdf", "permanent": false },
     { "source": "/resume.pdf", "destination": "/assets/Karan_Kashyap_Resume.pdf", "permanent": false }
   ]

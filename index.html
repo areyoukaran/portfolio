@@ -28,7 +28,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#14161a">
 
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -61,7 +61,7 @@
   <button class="topbar-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
   <div class="topbar-links" id="mobile-menu">
     <a href="index.html" class="active">Home</a>
-    <a href="#projects">Projects</a>
+    <a href="projects.html">Projects</a>
     <a href="about.html" >About</a>
     <a href="resume.html" >Resume</a>
     <a href="contact.html" >Contact</a>
@@ -73,7 +73,7 @@
     <a href="index.html" class="nav-mark">karan<span>.</span></a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="about.html" >About</a></li>
       <li><a href="resume.html" >Resume</a></li>
       <li><a href="contact.html" >Contact</a></li>
@@ -103,7 +103,7 @@
         <p class="tagline">Backend Engineer focused on Python APIs, LLM evaluation, adversarial testing, and ML-powered applications.</p>
         <div class="btn-row">
           <a href="resume.html" class="btn btn-primary">Read the resume →</a>
-          <a href="#projects" class="btn btn-ghost">See projects</a>
+          <a href="projects.html" class="btn btn-ghost">See projects</a>
         </div>
       </div>
       <div class="hero-avatar">
@@ -138,101 +138,6 @@
     </div>
   </section>
 
-  <section class="section" id="projects">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Selected work</span>
-        <h2>Systems over screenshots.</h2>
-      </div>
-    </div>
-    <p class="section-copy" style="max-width: 560px; margin-top: 10px;">A few things I've built and shipped. Pulled straight from GitHub, code included.</p>
-
-    <div class="projects-grid">
-      <article class="project-card">
-        <div class="project-card-top">
-          <h3>Python AI Ecosystem Tracker</h3>
-          <span class="project-card-index">01</span>
-        </div>
-        <p>An automated pipeline that watches the Python and ML ecosystem: PyPI releases, GitHub stars, forks, and issue activity for projects like PyTorch, Transformers, and FastAPI. Runs on a daily GitHub Actions schedule and builds up a historical dataset instead of just showing a snapshot.</p>
-        <div class="project-card-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">GitHub Actions</span>
-          <span class="project-tag">PyPI API</span>
-          <span class="project-tag">Data pipeline</span>
-        </div>
-        <div class="project-card-links">
-          <a class="project-link is-primary" href="https://github.com/areyoukaran/python-ai-ecosystem-tracker" target="_blank" rel="noopener">
-            <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            View code
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-top">
-          <h3>HRMS Lite</h3>
-          <span class="project-card-index">02</span>
-        </div>
-        <p>A lightweight HR management system for tracking employees and daily attendance. Admin dashboard, employee directory, and a present/absent tracker, backed by a Flask REST API with a clean enterprise-style front end.</p>
-        <div class="project-card-tags">
-          <span class="project-tag">Flask</span>
-          <span class="project-tag">SQLAlchemy</span>
-          <span class="project-tag">SQLite</span>
-          <span class="project-tag">REST API</span>
-        </div>
-        <div class="project-card-links">
-          <a class="project-link is-primary" href="https://github.com/areyoukaran/hrms-lite" target="_blank" rel="noopener">
-            <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            View code
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-top">
-          <h3>Music Recommendation System</h3>
-          <span class="project-card-index">03</span>
-        </div>
-        <p>Content-based recommender trained on a 1M+ song dataset. Engineered audio metadata features, built similarity scoring with scikit-learn, and wrapped it in a Streamlit app for real-time recommendations.</p>
-        <div class="project-card-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">scikit-learn</span>
-          <span class="project-tag">TensorFlow</span>
-          <span class="project-tag">Streamlit</span>
-        </div>
-        <div class="project-card-links">
-          <a class="project-link is-primary" href="https://github.com/areyoukaran/music-recommendation-system" target="_blank" rel="noopener">
-            <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            View code
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-top">
-          <h3>Face Recognition Attendance System</h3>
-          <span class="project-card-index">04</span>
-        </div>
-        <p>Marks attendance automatically by recognizing faces through a live webcam feed, using OpenCV's Haar cascade classifier behind a simple Flask front end.</p>
-        <div class="project-card-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">OpenCV</span>
-          <span class="project-tag">Flask</span>
-        </div>
-        <div class="project-card-links">
-          <a class="project-link is-primary" href="https://github.com/areyoukaran/face-recognition-based-attendance-system" target="_blank" rel="noopener">
-            <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            View code
-          </a>
-        </div>
-      </article>
-    </div>
-
-    <div class="projects-more">
-      <a class="btn btn-ghost" href="https://github.com/areyoukaran" target="_blank" rel="noopener">More on GitHub ↗</a>
-    </div>
-  </section>
-
   <section class="section" id="git-pulse">
     <div class="section-head">
       <span class="eyebrow">Live from GitHub</span>
@@ -257,20 +162,26 @@
       </div>
     </div>
     <div class="path-grid">
-      <a class="path-card path-card-featured" href="resume.html">
-        <span class="path-code">01 · evidence</span>
-        <strong>Experience, projects, and proof</strong>
-        <p>Internships, results, certifications, and the things I've built.</p>
+      <a class="path-card path-card-featured" href="projects.html">
+        <span class="path-code">01 · build log</span>
+        <strong>See what I've shipped</strong>
+        <p>DropDock, Codive, WorkHive, and the tracker, with code and live demos.</p>
+        <span class="path-link">View projects <b>↗</b></span>
+      </a>
+      <a class="path-card" href="resume.html">
+        <span class="path-code">02 · evidence</span>
+        <strong>Experience and proof</strong>
+        <p>Internships, results, and certifications.</p>
         <span class="path-link">Open resume <b>↗</b></span>
       </a>
       <a class="path-card" href="about.html">
-        <span class="path-code">02 · approach</span>
+        <span class="path-code">03 · approach</span>
         <strong>How I think about systems</strong>
         <p>How I work, what I care about, and what I'm learning.</p>
         <span class="path-link">Read about <b>↗</b></span>
       </a>
       <a class="path-card" href="contact.html">
-        <span class="path-code">03 · signal</span>
+        <span class="path-code">04 · signal</span>
         <strong>Start a conversation</strong>
         <p>Hiring, collaboration, or a useful problem that needs a backend-minded engineer.</p>
         <span class="path-link">Get in touch <b>↗</b></span>
@@ -284,6 +195,6 @@
     <span>© 2026 Karan Kashyap</span>
   </footer>
 </main>
-<script src="js/script.js?v=4"></script>
+<script src="js/script.js?v=3"></script>
 </body>
 </html>
