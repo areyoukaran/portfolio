@@ -28,7 +28,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#14161a">
 
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 <div class="topbar">
@@ -80,89 +80,144 @@
     <div class="projects-grid">
 
       <article class="project-card project-card-featured">
-        <div class="project-card-top">
-          <h3>DropDock</h3>
-          <span class="project-card-index">01</span>
+        <div class="project-visual" style="--vz-a:#2a2113; --vz-b:#1a1d23;">
+          <div class="visual-chrome is-live">
+            <span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span>
+            <span class="visual-url">dropdockk.vercel.app</span>
+            <span class="visual-badge is-live">Live</span>
+          </div>
+          <div class="visual-body"><span class="visual-mark">DD</span></div>
         </div>
-        <p>Ephemeral file, text, and image sharing, no signup required. Upload something and get a self-destructing link and QR code that expires by time, download count, or a single view. The one-download links are race-safe: if two people hit the same link at the same instant, an atomic SQL update guarantees exactly one of them succeeds, not both. A Celery-based sweep clears expired drops in the background instead of blocking requests.</p>
-        <div class="project-card-tags">
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">React</span>
-          <span class="project-tag">PostgreSQL</span>
-          <span class="project-tag">Celery</span>
-          <span class="project-tag">Redis</span>
-          <span class="project-tag">S3 / MinIO</span>
-        </div>
-        <div class="project-card-links">
-          <a class="project-link is-primary" href="https://dropdockk.vercel.app" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h5v2H5v12h12v-5h2v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
-            Live demo
-          </a>
-          <a class="project-link" href="https://github.com/areyoukaran/dropdock" target="_blank" rel="noopener">
-            <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            View code
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-top">
-          <h3>Codive</h3>
-          <span class="project-card-index">02</span>
-        </div>
-        <p>A GitHub-connected intelligence layer for developers. Codive syncs commits, pull requests, issues, and CI activity, then turns it into a daily brief: what changed, what needs review, what's gone stale. A repository-aware AI assistant answers questions using real repo data, retrieved through pgvector.</p>
-        <div class="project-card-tags">
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">PostgreSQL</span>
-          <span class="project-tag">pgvector</span>
-          <span class="project-tag">Redis</span>
-          <span class="project-tag">GitHub OAuth</span>
-        </div>
-        <div class="project-card-links">
-          <a class="project-link is-primary" href="https://github.com/areyoukaran/codive" target="_blank" rel="noopener">
-            <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            View code
-          </a>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <h3>DropDock</h3>
+            <span class="project-card-index">01</span>
+          </div>
+          <p>Ephemeral file, text, and image sharing, no signup required. Upload something and get a self-destructing link and QR code that expires by time, download count, or a single view. The one-download links are race-safe: if two people hit the same link at the same instant, an atomic SQL update guarantees exactly one of them succeeds, not both. A Celery-based sweep clears expired drops in the background instead of blocking requests.</p>
+          <div class="project-card-tags">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Celery</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">S3 / MinIO</span>
+          </div>
+          <div class="project-card-links">
+            <a class="project-link is-primary" href="https://dropdockk.vercel.app" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h5v2H5v12h12v-5h2v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
+              Live demo
+            </a>
+            <a class="project-link" href="https://github.com/areyoukaran/dropdock" target="_blank" rel="noopener">
+              <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+              View code
+            </a>
+          </div>
         </div>
       </article>
 
       <article class="project-card">
-        <div class="project-card-top">
-          <h3>WorkHive</h3>
-          <span class="project-card-index">03</span>
+        <div class="project-visual" style="--vz-a:#131b26; --vz-b:#1a1d23;">
+          <div class="visual-chrome">
+            <span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span>
+            <span class="visual-url">~/codive</span>
+            <span class="visual-badge is-code">Code only</span>
+          </div>
+          <div class="visual-body is-term">
+            <div class="visual-code-line" style="width:62%"></div>
+            <div class="visual-code-line" style="width:84%"></div>
+            <div class="visual-code-line" style="width:46%"></div>
+            <span class="visual-mark-small">CD</span>
+          </div>
         </div>
-        <p>Full-stack team and project management platform. JWT-based auth with three roles (Admin, Team Lead, Member), project and task CRUD, and a dashboard that tracks completion automatically from task status. Started on MongoDB, later migrated to PostgreSQL with async SQLAlchemy.</p>
-        <div class="project-card-tags">
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">React</span>
-          <span class="project-tag">PostgreSQL</span>
-          <span class="project-tag">JWT</span>
-        </div>
-        <div class="project-card-links">
-          <a class="project-link is-primary" href="https://github.com/areyoukaran/workhive" target="_blank" rel="noopener">
-            <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            View code
-          </a>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <h3>Codive</h3>
+            <span class="project-card-index">02</span>
+          </div>
+          <p>A GitHub-connected intelligence layer for developers. Codive syncs commits, pull requests, issues, and CI activity, then turns it into a daily brief: what changed, what needs review, what's gone stale. A repository-aware AI assistant answers questions using real repo data, retrieved through pgvector.</p>
+          <div class="project-card-tags">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">pgvector</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">GitHub OAuth</span>
+          </div>
+          <div class="project-card-links">
+            <a class="project-link is-primary" href="https://github.com/areyoukaran/codive" target="_blank" rel="noopener">
+              <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+              View code
+            </a>
+          </div>
         </div>
       </article>
 
       <article class="project-card">
-        <div class="project-card-top">
-          <h3>Python AI Ecosystem Tracker</h3>
-          <span class="project-card-index">04</span>
+        <div class="project-visual" style="--vz-a:#231a12; --vz-b:#1a1d23;">
+          <div class="visual-chrome">
+            <span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span>
+            <span class="visual-url">~/workhive</span>
+            <span class="visual-badge is-code">Code only</span>
+          </div>
+          <div class="visual-body is-term">
+            <div class="visual-code-line" style="width:54%"></div>
+            <div class="visual-code-line" style="width:76%"></div>
+            <div class="visual-code-line" style="width:38%"></div>
+            <span class="visual-mark-small">WH</span>
+          </div>
         </div>
-        <p>An automated pipeline that watches the Python and ML ecosystem: PyPI releases, GitHub stars, forks, and issue activity for projects like PyTorch, Transformers, and FastAPI. Runs on a daily GitHub Actions schedule and builds up a historical dataset instead of just showing a snapshot.</p>
-        <div class="project-card-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">GitHub Actions</span>
-          <span class="project-tag">PyPI API</span>
-          <span class="project-tag">Data pipeline</span>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <h3>WorkHive</h3>
+            <span class="project-card-index">03</span>
+          </div>
+          <p>Full-stack team and project management platform. JWT-based auth with three roles (Admin, Team Lead, Member), project and task CRUD, and a dashboard that tracks completion automatically from task status. Started on MongoDB, later migrated to PostgreSQL with async SQLAlchemy.</p>
+          <div class="project-card-tags">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">JWT</span>
+          </div>
+          <div class="project-card-links">
+            <a class="project-link is-primary" href="https://github.com/areyoukaran/workhive" target="_blank" rel="noopener">
+              <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+              View code
+            </a>
+          </div>
         </div>
-        <div class="project-card-links">
-          <a class="project-link is-primary" href="https://github.com/areyoukaran/python-ai-ecosystem-tracker" target="_blank" rel="noopener">
-            <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            View code
-          </a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual" style="--vz-a:#131f16; --vz-b:#1a1d23;">
+          <div class="visual-chrome">
+            <span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span>
+            <span class="visual-url">~/python-ai-ecosystem-tracker</span>
+            <span class="visual-badge is-code">Code only</span>
+          </div>
+          <div class="visual-body is-term">
+            <div class="visual-code-line" style="width:70%"></div>
+            <div class="visual-code-line" style="width:40%"></div>
+            <div class="visual-code-line" style="width:58%"></div>
+            <span class="visual-mark-small">PY</span>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <h3>Python AI Ecosystem Tracker</h3>
+            <span class="project-card-index">04</span>
+          </div>
+          <p>An automated pipeline that watches the Python and ML ecosystem: PyPI releases, GitHub stars, forks, and issue activity for projects like PyTorch, Transformers, and FastAPI. Runs on a daily GitHub Actions schedule and builds up a historical dataset instead of just showing a snapshot.</p>
+          <div class="project-card-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">GitHub Actions</span>
+            <span class="project-tag">PyPI API</span>
+            <span class="project-tag">Data pipeline</span>
+          </div>
+          <div class="project-card-links">
+            <a class="project-link is-primary" href="https://github.com/areyoukaran/python-ai-ecosystem-tracker" target="_blank" rel="noopener">
+              <span class="gh-glyph"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.303-5.466-1.334-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+              View code
+            </a>
+          </div>
         </div>
       </article>
 
@@ -170,6 +225,36 @@
 
     <div class="projects-more">
       <a class="btn btn-ghost" href="https://github.com/areyoukaran" target="_blank" rel="noopener">More on GitHub ↗</a>
+    </div>
+  </section>
+
+  <section class="section contrib-section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Also in the mix</span>
+        <h2>Where I've contributed.</h2>
+      </div>
+    </div>
+    <p class="section-copy" style="max-width: 560px; margin-top: 10px;">Projects I didn't start on my own, where I'm one of the people committing code.</p>
+
+    <div class="contrib-list">
+      <a class="contrib-card" href="https://github.com/projectvestra/vestra" target="_blank" rel="noopener">
+        <div class="contrib-mark">V</div>
+        <div class="contrib-info">
+          <div class="contrib-top">
+            <h3>Vestra</h3>
+            <span class="contrib-role">Contributor</span>
+          </div>
+          <p>An AI-powered outfit planning app built with React Native and Expo, with a FastAPI service behind it generating style recommendations. Part of the team shipping features on <code>projectvestra/vestra</code>.</p>
+          <div class="project-card-tags">
+            <span class="project-tag">React Native</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Firebase</span>
+          </div>
+        </div>
+        <span class="contrib-arrow">↗</span>
+      </a>
     </div>
   </section>
 
